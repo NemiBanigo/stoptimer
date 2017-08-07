@@ -1,45 +1,94 @@
 span {
   display: inline-block; }
 
-body {
-  margin: 0; }
-  body .stopwatch {
-    margin: 0 auto;
-    width: 300px;
-    padding: 70px;
-    background-color: #673AB7;
+body{
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  
+}
+.container{
+  display:block;
+  .header{
     text-align: center;
-    border-radius: 30px;
-    font-family: josefin sans, sans-serif; }
-  body .timer {
-    color: #fff;
-    font-size: 70px;
-    margin-top: 30px; }
-  body .start {
-    background-color: #66BB6A;
-    border-style: none;
-    padding: 10px;
-    transition: 0.4s ease all; }
-    body .start:hover {
-      background-color: #33691E;
-      cursor: pointer; }
-  body .stop {
-    background-color: #ff6347;
-    border-style: none;
-    padding: 10px;
-    transition: 0.4s ease all; }
-    body .stop:hover {
-      background-color: #b71c1c;
-      cursor: pointer; }
-  body .reset {
-    display: block;
-    color: #fff;
-    margin-top: 10px;
-    background: none;
-    outline: none;
-    border: none;
-    width: 100%; }
-    body .reset:hover {
-      cursor: pointer; }
+    color: #407FEE;
+    font-size: 15px;
+    margin-top: 50px;
+  }
+  .timer-box{
+    width: 500px;
+    padding: 100px 50px;
+    background-color: #407FEE;
+    margin: 0 auto;
+    border-radius: 3px;
+  
+    .form{
+     display: flex;
+     .input{   
+      height: 35px;
+      width:350px;
+      background-color: #ffffff;
+      border: none;
+      box-shadow: none;
+      border-radius: 3px;
+      color: #c4c4c4;
+      padding: 0 20px;
+     }
+     .button{
+       margin-left: 3px;
+       background-color: #174698;
+       border: none;
+       padding: 0 20px;
+       border-radius: 3px;
+       color: #fff;
+       &:hover{
+         transition: 0.4s ease all;
+         background-color: #64B5F6;
+         
+       }
+     }
+    }
+    .timer{
+      text-align: center;
+      color: #fff;
+      font-size: 80px;    
 
-/*# sourceMappingURL=stopwatch.css.map */
+    }
+    .buttons{
+      display: flex;
+      justify-content: center;
+    .reset{
+        background-color: #64B5F6;
+        margin-right: 3px;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        display: inline-block;
+        padding: 15px; 
+        transition: 0.4s ease all;
+        &:hover{
+          background-color: #1A237E;
+          
+        }
+
+    } 
+    .pause{
+      background-color: #64B5F6;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        text-align:center;
+        display: inline-block;
+        padding: 15px;
+      
+        transition: 0.4s ease all;
+        &:hover{
+          background-color: #1A237E;
+        } 
+   
+      }
+
+    
+
+    }
+  }
+}

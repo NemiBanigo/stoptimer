@@ -1,0 +1,72 @@
+span {
+  display: inline-block; }
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif; }
+
+.container {
+  display: block; }
+  .container .header {
+    text-align: center;
+    color: #407FEE;
+    font-size: 15px;
+    margin-top: 50px; }
+  .container .timer-box {
+    width: 500px;
+    padding: 100px 50px;
+    background-color: #407FEE;
+    margin: 0 auto;
+    border-radius: 3px; }
+    .container .timer-box .form {
+      display: flex; }
+      .container .timer-box .form .input {
+        height: 35px;
+        width: 350px;
+        background-color: #ffffff;
+        border: none;
+        box-shadow: none;
+        border-radius: 3px;
+        color: #c4c4c4;
+        padding: 0 20px; }
+      .container .timer-box .form .button {
+        margin-left: 3px;
+        background-color: #174698;
+        border: none;
+        padding: 0 20px;
+        border-radius: 3px;
+        color: #fff; }
+        .container .timer-box .form .button:hover {
+          transition: 0.4s ease all;
+          background-color: #64B5F6; }
+    .container .timer-box .timer {
+      text-align: center;
+      color: #fff;
+      font-size: 80px; }
+    .container .timer-box .buttons {
+      display: flex;
+      justify-content: center; }
+      .container .timer-box .buttons .reset {
+        background-color: #64B5F6;
+        margin-right: 3px;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        display: inline-block;
+        padding: 15px;
+        transition: 0.4s ease all; }
+        .container .timer-box .buttons .reset:hover {
+          background-color: #1A237E; }
+      .container .timer-box .buttons .pause {
+        background-color: #64B5F6;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        text-align: center;
+        display: inline-block;
+        padding: 15px;
+        transition: 0.4s ease all; }
+        .container .timer-box .buttons .pause:hover {
+          background-color: #1A237E; }
+
+/*# sourceMappingURL=stoptimer.css.map */
