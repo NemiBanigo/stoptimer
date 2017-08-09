@@ -1,56 +1,40 @@
-const startButton = document.querySelector('[data-action=start]');
-const stopButton= document.querySelector('[data-action=stop]');
+// const startButton = document.querySelector('.button');
+let startButton = document.getElementById("button-input");
+const pauseButton= document.querySelector('[data-action=pause]');
 const resetButton = document.querySelector('[data-action=reset]');
-const minutes = document.querySelector('.minutes');
 const seconds = document.querySelector('.seconds');
+const minutes = document.querySelector('.minutes');
 
-let timerTime = 00;
-let interval;
-let counting = false;
-
-
+let timerTime = document.querySelector('.input').value;
+let dataInput = document.querySelector('.input').value;
 
 
-//functions
-function keepzero(num){
-   return(num < 10) ? '0' + num  : num;
+
+function Timer(){
+    setInterval(function(){
+    timerTime--;
+    console.count("please stop acting up");
+    const numOfseconds = Math.floor(timerTime%60);
+    const numOfminutes = Math.floor(timerTime/60);
+
+    seconds.innerText = numOfseconds;
+    minutes.innerText = numOfminutes;
+   
+    if (numOfminutes && numOfseconds < 0 ){
+        numOfminutes, numOfseconds = 0;
+    }
+}, 1000);
 }
+
+
+// console.log(dataInput);
 
 function startTimer(){
-    if (counting)return;
-    interval = setInterval(incrementTimer,1000);
-    counting = true;
-    }
-
-
-function stopTimer (){
-    if (!counting)return;
-    clearInterval(interval);
-    counting = false;
+    Timer();    
 
 }
-function resetTimer(){
-    stopTimer()
-
-    timerTime = 0;
-    minutes.innerText =keepzero(00);
-    seconds.innerText=keepzero(00);
-
-}
-function incrementTimer(){
-    timerTime++;
-    const numOfminutes = Math.floor(timerTime/60);
-    const numOfseconds = timerTime % 60;
-    // console.log({numOfminutes,numOfseconds});
-    seconds.innerText =keepzero(numOfseconds);
-    minutes.innerText = keepzero(numOfminutes);
-}
-
-
-
-
-
-// add eventlisteners //
-startButton.addEventListener('click', startTimer);
-stopButton.addEventListener('click', stopTimer);
-resetButton.addEventListener('click', resetTimer);
+// startTimer();
+//add event listeners
+startButton.addEventListener("onclick", Timer() );
+// pauseButton.addEventListener('click', pauseTimer );
+// resetButton.addEventListener('click', resetTimer);

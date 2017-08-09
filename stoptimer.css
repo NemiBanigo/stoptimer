@@ -29,6 +29,8 @@ body {
         border-radius: 3px;
         color: #c4c4c4;
         padding: 0 20px; }
+        .container .timer-box .form .input:focus {
+          color: #c00c00; }
       .container .timer-box .form .button {
         margin-left: 3px;
         background-color: #174698;
@@ -48,7 +50,7 @@ body {
       justify-content: center; }
       .container .timer-box .buttons .reset {
         background-color: #64B5F6;
-        margin-right: 3px;
+        margin-left: 10px;
         border: none;
         border-radius: 3px;
         color: #fff;

@@ -32,6 +32,9 @@ body{
       border-radius: 3px;
       color: #c4c4c4;
       padding: 0 20px;
+      &:focus{
+        color: #c00c00;
+      }
      }
      .button{
        margin-left: 3px;
@@ -58,7 +61,7 @@ body{
       justify-content: center;
     .reset{
         background-color: #64B5F6;
-        margin-right: 3px;
+        margin-left: 10px;
         border: none;
         border-radius: 3px;
         color: #fff;
