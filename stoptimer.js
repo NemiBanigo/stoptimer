@@ -1,40 +1,33 @@
-// const startButton = document.querySelector('.button');
-let startButton = document.getElementById("button-input");
-const pauseButton= document.querySelector('[data-action=pause]');
-const resetButton = document.querySelector('[data-action=reset]');
-const seconds = document.querySelector('.seconds');
-const minutes = document.querySelector('.minutes');
+// const startButton = document.querySelector('[data-action=start]');
+// const pauseButton= document.querySelector('[data-action=pause]');
+// const resetButton = document.querySelector('[data-action=reset]');
+// const minutes = document.querySelector('.minutes');
+// const seconds = document.querySelector('.seconds');
 
-let timerTime = document.querySelector('.input').value;
-let dataInput = document.querySelector('.input').value;
+let countdown;
 
 
-
-function Timer(){
-    setInterval(function(){
-    timerTime--;
-    console.count("please stop acting up");
-    const numOfseconds = Math.floor(timerTime%60);
-    const numOfminutes = Math.floor(timerTime/60);
-
-    seconds.innerText = numOfseconds;
-    minutes.innerText = numOfminutes;
+function timer(seconds){
+    const now = Date.now();
+    const then = now + seconds * 1000;
+    displayTimeLeft(seconds);
    
-    if (numOfminutes && numOfseconds < 0 ){
-        numOfminutes, numOfseconds = 0;
-    }
-}, 1000);
+   countdown = setInterval(()=>{
+       const secondsLeft = Math.round((then - Date.now())/1000);
+
+        if (secondsLeft < 0){
+            clearInterval(countdown);
+            return;
+        }
+    displayTimeLeft(secondsLeft);   
+    },1000);
+    
+}
+function displayTimeLeft(seconds){
+    const numOfminutes = Math.floor(seconds/60);
+    const numOfseconds = seconds % 60;
+    seconds.innerText = numOfminutes;
+   console.log(numOfminutes);
 }
 
 
-// console.log(dataInput);
-
-function startTimer(){
-    Timer();    
-
-}
-// startTimer();
-//add event listeners
-startButton.addEventListener("onclick", Timer() );
-// pauseButton.addEventListener('click', pauseTimer );
-// resetButton.addEventListener('click', resetTimer);
